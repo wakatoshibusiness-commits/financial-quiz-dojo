@@ -1,0 +1,67 @@
+{
+    "companies": [
+        {
+            "code": "9983",
+            "name": "ファーストリテイリング（ユニクロ）",
+            "industry": "小売業",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年8月期",
+            "financial_data": {
+                "revenue": 2730000,
+                "revenue_growth": 6.2,
+                "operating_profit": 381000,
+                "operating_profit_growth": 8.5,
+                "net_income": 273000,
+                "total_assets": 3500000,
+                "equity": 2275000,
+                "roe": 15.0,
+                "equity_ratio": 65.0,
+                "operating_margin": 14.0
+            },
+            "source": "https://irbank.net/9983",
+            "last_updated": "2024-12-01"
+        },
+        {
+            "code": "7203",
+            "name": "トヨタ自動車",
+            "industry": "自動車製造業",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 37200000,
+                "revenue_growth": 21.4,
+                "operating_profit": 2840000,
+                "operating_profit_growth": 96.1,
+                "net_income": 2500000,
+                "total_assets": 83000000,
+                "equity": 37350000,
+                "roe": 12.0,
+                "equity_ratio": 45.0,
+                "operating_margin": 7.6
+            },
+            "source": "https://irbank.net/7203",
+            "last_updated": "2024-12-01"
+        },
+        {
+            "code": "6758",
+            "name": "ソニーグループ",
+            "industry": "エレクトロニクス・エンターテインメント",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 12000000,
+                "revenue_growth": 19.0,
+                "operating_profit": 1200000,
+                "operating_profit_growth": 5.1,
+                "net_income": 970000,
+                "total_assets": 28000000,
+                "equity": 15400000,
+                "roe": 18.0,
+                "equity_ratio": 55.0,
+                "operating_margin": 10.0
+            },
+            "source": "https://irbank.net/6758",
+            "last_updated": "2024-12-01"
+        }
+    ]
+}
