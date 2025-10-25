@@ -1,4 +1,3 @@
-````markdown
 # 📊 AI財務分析クイズ生成システム
 
 新卒社員向けに、AIが自動的に財務分析の学習用クイズを生成するシステムです。
@@ -35,7 +34,7 @@
   - requests（Slack連携）
 
 ## 📁 プロジェクト構成
-````
+```
 financial-quiz-dojo/
 ├── company_data.json          # 企業財務データ（10社分）
 ├── data_loader.py             # データ読み込み・管理
@@ -46,7 +45,7 @@ financial-quiz-dojo/
 ├── .env                       # APIキー（.gitignoreで除外）
 ├── .gitignore                 # Git除外設定
 └── README.md                  # このファイル
-`````
+```
 
 ## 📊 収録企業（10社）
 
@@ -66,22 +65,22 @@ financial-quiz-dojo/
 ## 🚀 セットアップ方法
 
 ### 1. リポジトリのクローン
-`````bash
+```bash
 git clone https://github.com/wakatoshibusiness-commits/financial-quiz-dojo.git
 cd financial-quiz-dojo
-`````
+```
 
 ### 2. 必要なパッケージのインストール
-`````bash
+```bash
 pip install google-generativeai python-dotenv requests
-`````
+```
 
 ### 3. 環境変数の設定
 `.env` ファイルを作成し、APIキーを設定：
-`````
+```
 GOOGLE_API_KEY=your_gemini_api_key_here
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
-`````
+```
 
 **Google Gemini APIキーの取得方法:**
 1. [Google AI Studio](https://aistudio.google.com/) にアクセス
@@ -100,17 +99,17 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 ### 4. 実行
 
 #### ローカルで確認:
-`````bash
+```bash
 python quiz_generator_gemini.py
-`````
+```
 
 #### Slackに投稿:
-`````bash
+```bash
 python daily_quiz.py
-`````
+```
 
 ## 📸 実行例
-`````
+```
 🚀 財務分析クイズ生成システム（Powered by Google Gemini）
 ======================================================================
 💰 完全無料！無制限！
@@ -134,7 +133,7 @@ python daily_quiz.py
 トヨタ自動車の営業利益率は7.6%となっています。
 売上高37兆円という巨大な規模の中で、この利益率を
 どのように評価すべきでしょうか...
-`````
+```
 
 ## 💡 工夫した点
 
