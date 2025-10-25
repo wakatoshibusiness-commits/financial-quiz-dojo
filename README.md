@@ -20,6 +20,8 @@
 - 📊 **実在企業データ**: 上場企業の実際の決算データを使用（トヨタ、ソニー、ユニクロなど）
 - 💡 **段階的学習**: 問題 → ヒント → 解答 → 解説の流れで理解を深化
 - 🆓 **完全無料**: Google Gemini の無料枠を使用し、コスト0で運用可能
+- 📤 **Slack自動投稿**: Webhook経由で毎日自動配信
+- 🎲 **ランダム出題**: 10社からランダムに選択
 
 ## 🛠️ 技術スタック
 
@@ -33,7 +35,9 @@
 ## 📁 プロジェクト構成
 ```
 financial-quiz-dojo/
-├── company_data.json          # 企業財務データ（3社分）
+├── company_data.json          # 企業財務データ（10社分）
+├── slack_notifier.py          # Slack通知機能
+├── daily_quiz.py              # メインスクリプト（統合システム）
 ├── data_loader.py             # データ読み込み・管理
 ├── quiz_generator_gemini.py   # AI問題生成メイン
 ├── check_models.py            # 利用可能なAIモデル確認
@@ -58,7 +62,8 @@ pip install google-generativeai python-dotenv
 ### 3. 環境変数の設定
 `.env` ファイルを作成し、Google Gemini APIキーを設定：
 ```
-GOOGLE_API_KEY=your_api_key_here
+GOOGLE_API_KEY=your_gemini_api_key_here
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 ```
 
 **APIキーの取得方法:**
@@ -67,9 +72,50 @@ GOOGLE_API_KEY=your_api_key_here
 3. 「Get API key」→「Create API key」
 4. 生成されたキーをコピー
 
+**Slack Webhook URLの取得方法:**
+1. [Slack API](https://api.slack.com/apps) にアクセス
+2. 「Create New App」→「From scratch」
+3. 「Incoming Webhooks」を有効化
+4. 「Add New Webhook to Workspace」
+5. 投稿先チャンネルを選択
+6. 生成されたURLをコピー
+
 ### 4. 実行
 ```bash
 python quiz_generator_gemini.py
+```
+
+#### Slackに投稿:
+```bash
+python daily_quiz.py
+```
+
+```markdown
+## 📊 収録企業（10社）
+
+1. トヨタ自動車（7203）- 自動車製造業
+2. ソニーグループ（6758）- エレクトロニクス
+3. ファーストリテイリング（9983）- 小売業
+4. 任天堂（7974）- ゲーム
+5. キーエンス（6861）- 精密機器
+6. 三菱商事（8058）- 総合商社
+7. 信越化学工業（4063）- 化学
+8. オリエンタルランド（4661）- レジャー
+9. ニデック（6594）- 電気機器
+10. ソフトバンクグループ（9984）- 投資
+
+多様な業界をカバーし、様々な財務特性を学習できます。
+```
+
+## 🔜 今後の展開
+
+- [ ] Slack Webhook による自動投稿機能 ✅ **完了！**
+- [ ] インタラクティブな解答表示（ボタンクリック）
+- [ ] GitHub Actions で毎日自動実行
+- [ ] 企業データを20社以上に拡充
+- [ ] 回答履歴の記録・分析機能
+- [ ] 難易度別の問題生成
+- [ ] Webダッシュボードの作成
 ```
 
 ## 📸 実行例
