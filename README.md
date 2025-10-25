@@ -1,3 +1,4 @@
+````markdown
 # 📊 AI財務分析クイズ生成システム
 
 新卒社員向けに、AIが自動的に財務分析の学習用クイズを生成するシステムです。
@@ -17,7 +18,7 @@
 ## ✨ 主な機能
 
 - 🤖 **AI自動問題生成**: Google Gemini APIを使用し、財務データから自動で問題を生成
-- 📊 **実在企業データ**: 上場企業の実際の決算データを使用（トヨタ、ソニー、ユニクロなど）
+- 📊 **実在企業データ**: 上場企業の実際の決算データを使用（10社収録）
 - 💡 **段階的学習**: 問題 → ヒント → 解答 → 解説の流れで理解を深化
 - 🆓 **完全無料**: Google Gemini の無料枠を使用し、コスト0で運用可能
 - 📤 **Slack自動投稿**: Webhook経由で毎日自動配信
@@ -31,66 +32,22 @@
 - **その他**: 
   - python-dotenv（環境変数管理）
   - google-generativeai（AI API）
+  - requests（Slack連携）
 
 ## 📁 プロジェクト構成
-```
+````
 financial-quiz-dojo/
 ├── company_data.json          # 企業財務データ（10社分）
-├── slack_notifier.py          # Slack通知機能
-├── daily_quiz.py              # メインスクリプト（統合システム）
 ├── data_loader.py             # データ読み込み・管理
 ├── quiz_generator_gemini.py   # AI問題生成メイン
+├── slack_notifier.py          # Slack通知機能
+├── daily_quiz.py              # メインスクリプト（統合システム）
 ├── check_models.py            # 利用可能なAIモデル確認
 ├── .env                       # APIキー（.gitignoreで除外）
 ├── .gitignore                 # Git除外設定
 └── README.md                  # このファイル
-```
+`````
 
-## 🚀 セットアップ方法
-
-### 1. リポジトリのクローン
-```bash
-git clone https://github.com/wakatoshibusiness-commits/financial-quiz-dojo.git
-cd financial-quiz-dojo
-```
-
-### 2. 必要なパッケージのインストール
-```bash
-pip install google-generativeai python-dotenv
-```
-
-### 3. 環境変数の設定
-`.env` ファイルを作成し、Google Gemini APIキーを設定：
-```
-GOOGLE_API_KEY=your_gemini_api_key_here
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
-```
-
-**APIキーの取得方法:**
-1. [Google AI Studio](https://aistudio.google.com/) にアクセス
-2. Googleアカウントでログイン
-3. 「Get API key」→「Create API key」
-4. 生成されたキーをコピー
-
-**Slack Webhook URLの取得方法:**
-1. [Slack API](https://api.slack.com/apps) にアクセス
-2. 「Create New App」→「From scratch」
-3. 「Incoming Webhooks」を有効化
-4. 「Add New Webhook to Workspace」
-5. 投稿先チャンネルを選択
-6. 生成されたURLをコピー
-
-### 4. 実行
-```bash
-python quiz_generator_gemini.py
-```
-
-#### Slackに投稿:
-```bash
-python daily_quiz.py
-```
-
-```markdown
 ## 📊 収録企業（10社）
 
 1. トヨタ自動車（7203）- 自動車製造業
@@ -105,21 +62,55 @@ python daily_quiz.py
 10. ソフトバンクグループ（9984）- 投資
 
 多様な業界をカバーし、様々な財務特性を学習できます。
-```
 
-## 🔜 今後の展開
+## 🚀 セットアップ方法
 
-- [ ] Slack Webhook による自動投稿機能 ✅ **完了！**
-- [ ] インタラクティブな解答表示（ボタンクリック）
-- [ ] GitHub Actions で毎日自動実行
-- [ ] 企業データを20社以上に拡充
-- [ ] 回答履歴の記録・分析機能
-- [ ] 難易度別の問題生成
-- [ ] Webダッシュボードの作成
-```
+### 1. リポジトリのクローン
+`````bash
+git clone https://github.com/wakatoshibusiness-commits/financial-quiz-dojo.git
+cd financial-quiz-dojo
+`````
+
+### 2. 必要なパッケージのインストール
+`````bash
+pip install google-generativeai python-dotenv requests
+`````
+
+### 3. 環境変数の設定
+`.env` ファイルを作成し、APIキーを設定：
+`````
+GOOGLE_API_KEY=your_gemini_api_key_here
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+`````
+
+**Google Gemini APIキーの取得方法:**
+1. [Google AI Studio](https://aistudio.google.com/) にアクセス
+2. Googleアカウントでログイン
+3. 「Get API key」→「Create API key」
+4. 生成されたキーをコピー
+
+**Slack Webhook URLの取得方法:**
+1. [Slack API](https://api.slack.com/apps) にアクセス
+2. 「Create New App」→「From scratch」
+3. 「Incoming Webhooks」を有効化
+4. 「Add New Webhook to Workspace」
+5. 投稿先チャンネルを選択
+6. 生成されたURLをコピー
+
+### 4. 実行
+
+#### ローカルで確認:
+`````bash
+python quiz_generator_gemini.py
+`````
+
+#### Slackに投稿:
+`````bash
+python daily_quiz.py
+`````
 
 ## 📸 実行例
-```
+`````
 🚀 財務分析クイズ生成システム（Powered by Google Gemini）
 ======================================================================
 💰 完全無料！無制限！
@@ -143,7 +134,7 @@ python daily_quiz.py
 トヨタ自動車の営業利益率は7.6%となっています。
 売上高37兆円という巨大な規模の中で、この利益率を
 どのように評価すべきでしょうか...
-```
+`````
 
 ## 💡 工夫した点
 
@@ -176,10 +167,14 @@ python daily_quiz.py
 - GitHubでのコード公開・管理
 - プロンプトエンジニアリングの基礎
 - セキュリティ（APIキー管理）の重要性
+- Slack Webhook連携
 
 ## 🔜 今後の展開
 
-- [ ] Slack Webhook による自動投稿機能
+- [x] AI自動問題生成機能 ✅
+- [x] Slack Webhook による自動投稿機能 ✅
+- [x] 企業データ10社収録 ✅
+- [ ] インタラクティブな解答表示（ボタンクリック）
 - [ ] GitHub Actions で毎日自動実行
 - [ ] 企業データを20社以上に拡充
 - [ ] 回答履歴の記録・分析機能
@@ -189,6 +184,7 @@ python daily_quiz.py
 ## 🤝 使用技術・参考資料
 
 - [Google Gemini API Documentation](https://ai.google.dev/)
+- [Slack Incoming Webhooks](https://api.slack.com/messaging/webhooks)
 - [Python dotenv](https://github.com/theskumar/python-dotenv)
 - [IR BANK](https://irbank.net/) - 企業財務データ参照
 
