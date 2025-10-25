@@ -62,6 +62,153 @@
             },
             "source": "https://irbank.net/6758",
             "last_updated": "2024-12-01"
+        },
+        {
+            "code": "7974",
+            "name": "任天堂",
+            "industry": "ゲーム・エンターテインメント",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 1672070,
+                "revenue_growth": 16.5,
+                "operating_profit": 528900,
+                "operating_profit_growth": 13.4,
+                "net_income": 432200,
+                "total_assets": 2662000,
+                "equity": 2084000,
+                "roe": 22.1,
+                "equity_ratio": 78.3,
+                "operating_margin": 31.6
+            },
+            "source": "https://irbank.net/7974",
+            "last_updated": "2024-12-05"
+        },
+        {
+            "code": "6861",
+            "name": "キーエンス",
+            "industry": "電子部品・精密機器",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 890000,
+                "revenue_growth": 15.2,
+                "operating_profit": 489000,
+                "operating_profit_growth": 18.3,
+                "net_income": 351000,
+                "total_assets": 1850000,
+                "equity": 1620000,
+                "roe": 23.5,
+                "equity_ratio": 87.6,
+                "operating_margin": 54.9
+            },
+            "source": "https://irbank.net/6861",
+            "last_updated": "2024-12-05"
+        },
+        {
+            "code": "8058",
+            "name": "三菱商事",
+            "industry": "総合商社",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 21033000,
+                "revenue_growth": 8.5,
+                "operating_profit": 1205000,
+                "operating_profit_growth": 12.1,
+                "net_income": 1180000,
+                "total_assets": 22450000,
+                "equity": 9850000,
+                "roe": 13.2,
+                "equity_ratio": 43.9,
+                "operating_margin": 5.7
+            },
+            "source": "https://irbank.net/8058",
+            "last_updated": "2024-12-05"
+        },
+        {
+            "code": "4063",
+            "name": "信越化学工業",
+            "industry": "化学工業",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 2540000,
+                "revenue_growth": 5.8,
+                "operating_profit": 805000,
+                "operating_profit_growth": 7.2,
+                "net_income": 601000,
+                "total_assets": 4180000,
+                "equity": 3520000,
+                "roe": 18.3,
+                "equity_ratio": 84.2,
+                "operating_margin": 31.7
+            },
+            "source": "https://irbank.net/4063",
+            "last_updated": "2024-12-05"
+        },
+        {
+            "code": "4661",
+            "name": "オリエンタルランド",
+            "industry": "サービス業（テーマパーク）",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 581000,
+                "revenue_growth": 24.5,
+                "operating_profit": 135000,
+                "operating_profit_growth": 156.8,
+                "net_income": 88500,
+                "total_assets": 858000,
+                "equity": 448000,
+                "roe": 21.5,
+                "equity_ratio": 52.2,
+                "operating_margin": 23.2
+            },
+            "source": "https://irbank.net/4661",
+            "last_updated": "2024-12-05"
+        },
+        {
+            "code": "6594",
+            "name": "ニデック（旧：日本電産）",
+            "industry": "電気機器",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 2050000,
+                "revenue_growth": 8.2,
+                "operating_profit": 145000,
+                "operating_profit_growth": -18.5,
+                "net_income": 78000,
+                "total_assets": 2850000,
+                "equity": 1520000,
+                "roe": 5.3,
+                "equity_ratio": 53.3,
+                "operating_margin": 7.1
+            },
+            "source": "https://irbank.net/6594",
+            "last_updated": "2024-12-05"
+        },
+        {
+            "code": "9984",
+            "name": "ソフトバンクグループ",
+            "industry": "情報・通信業（投資会社）",
+            "fiscal_year": "2024",
+            "fiscal_period": "2024年3月期",
+            "financial_data": {
+                "revenue": 6564000,
+                "revenue_growth": 2.8,
+                "operating_profit": 185000,
+                "operating_profit_growth": -85.2,
+                "net_income": 58400,
+                "total_assets": 48850000,
+                "equity": 13850000,
+                "roe": 0.4,
+                "equity_ratio": 28.3,
+                "operating_margin": 2.8
+            },
+            "source": "https://irbank.net/9984",
+            "last_updated": "2024-12-05"
         }
     ]
 }
